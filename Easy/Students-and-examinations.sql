@@ -103,7 +103,16 @@ Alex did not attend any exams.
 John attended the Math exam 1 time, the Physics exam 1 time, and the Programming exam 1 time.
 
 
-  -- My solution 1way
+
+ Approach and Explanation:
+To compute the frequency of each student's attendance in each exam, we utilize SQL joins and aggregations on the Students, Subjects, and Examinations tables.
+ 
+1. Beginning with a cross join between Students and Subjects to generate all possible student-subject combinations.
+2. We then left join this result with Examinations, matching student IDs and subject names to count attendance occurrences.
+3. Grouping by student ID, student name, and subject name facilitates aggregation of attendance counts.
+4. Finally, ordering the output by student ID and subject name ensures the desired format, accounting for cases where students haven't attended exams or subjects lack recorded examinations.
+ 
+ -- My solution 1way
   SELECT a.student_id, 
        a.student_name, 
        b.subject_name, 
