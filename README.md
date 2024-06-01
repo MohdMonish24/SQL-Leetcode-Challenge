@@ -29,6 +29,9 @@ https://leetcode.com/problems/product-sales-analysis-i/?envType=study-plan-v2&en
 Rising Temperature
 https://leetcode.com/problems/rising-temperature/description/?envType=study-plan-v2&envId=top-sql-50
 
+Average Time of Process per Machine
+https://leetcode.com/problems/average-time-of-process-per-machine/description/?envType=study-plan-v2&envId=top-sql-50
+
 Students and Examinations
 https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/description/?envType=study-plan-v2&envId=top-sql-50 
 
