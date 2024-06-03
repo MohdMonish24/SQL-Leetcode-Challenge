@@ -68,10 +68,10 @@ divide it by the total number of queries for each query_name, multiplying by 100
 Round the result to two decimal places as well. Group the results by query_name.
 
 
-SELECT
-query_name,
-ROUND(AVG(rating * 1.0 / position), 2) AS quality, 
-ROUND(SUM(CASE WHEN rating <3 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2)
+SELECT query_name, --> show query_name from Queries Table...
+ROUND(AVG(rating * 1.0 / position), 2) AS quality,  --> calculate qualty which is equal to average (rating / position) then, rounding off for 2 decimal places...
+ROUND(SUM(CASE WHEN rating <3 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) --> calculate poor_query_percentage when rating < 3 consider 1 otherwise 0 then, rounding off for 2 decimal places...
 AS poor_query_percentage
-FROM queries WHERE query_name IS NOT NULL
-GROUP BY query_name;
+FROM queries --> Association from Queries table...
+ WHERE query_name IS NOT NULL --> query_name shouldn't be null...
+GROUP BY query_name;  --> grouping w.r.t. query_name..
